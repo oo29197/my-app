@@ -7,6 +7,7 @@ import Death from "/public/death.gif";
 import General from "/public/general.gif";
 import Soul from "/public/staring_to_soul.gif";
 import { ChevronRight } from "lucide-react";
+import Correct from "/public/correct.gif"
 
 import {
   Card,
@@ -242,7 +243,7 @@ export default function Quiz() {
 
                       {/* insert here */}
                       <Image
-                        src={Death}
+                        src={Correct}
                         width={1000}
                         height={1000}
                         alt="death.png"
@@ -325,6 +326,12 @@ export default function Quiz() {
                           {">"}
                         </Button>{" "}
                         TO PROCEED]
+                        <Image
+                        src={Correct}
+                        width={1000}
+                        height={1000}
+                        alt="death.png"
+                      />
                       </p>
                     </div>
                   ) : (
@@ -398,9 +405,10 @@ export default function Quiz() {
                         TO PROCEED]
                       </p>
 
+
                       {/* insert here */}
                       <Image
-                        src={Death}
+                        src={Correct}
                         width={1000}
                         height={1000}
                         alt="death.png"
@@ -479,7 +487,7 @@ export default function Quiz() {
 
                       {/* insert here */}
                       <Image
-                        src={Death}
+                        src={Correct}
                         width={1000}
                         height={1000}
                         alt="death.png"
@@ -558,7 +566,7 @@ export default function Quiz() {
 
                       {/* insert here */}
                       <Image
-                        src={Death}
+                        src={Correct}
                         width={1000}
                         height={1000}
                         alt="death.png"
@@ -643,7 +651,7 @@ export default function Quiz() {
 
                       {/* insert here */}
                       <Image
-                        src={Death}
+                        src={Correct}
                         width={1000}
                         height={1000}
                         alt="death.png"
