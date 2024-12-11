@@ -2,7 +2,7 @@ import Image from "next/image";
 import General from "/public/general.gif";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-
+import exterior from "/public/exterior.png"
 import {
   Card,
   CardDescription,

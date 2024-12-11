@@ -10,6 +10,7 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
+        landing: "url(/exterior.png)",
         hero: "url(/baseinterior.png)",
       },
       colors: {
