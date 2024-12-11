@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import {
   Card,
   CardDescription,
@@ -20,7 +18,10 @@ export default function Author() {
       <Card className="w-[800px] text-center bg-cyan-950 border-none rounded-none">
         <CardHeader>
           <CardTitle className="text-cyan-400">I am Xavier.</CardTitle>
-          <CardDescription className="text-cyan-400">A teenager that is relatively new to coding, who sings in my school's choir. I first really started coding in Roblox Studio.</CardDescription>
+          <CardDescription className="text-cyan-400">
+            A teenager that is relatively new to coding, who sings in my
+            school's choir. I first really started coding in Roblox Studio.
+          </CardDescription>
         </CardHeader>
       </Card>
     </div>
