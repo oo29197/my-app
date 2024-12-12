@@ -1,10 +1,10 @@
 "use client";
 
 import {
-    Card,
-    CardDescription,
-    CardHeader,
-    CardTitle,
+  Card,
+  CardDescription,
+  CardHeader,
+  CardTitle,
 } from "@/components/ui/card";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -37,7 +37,9 @@ export function ThreeDCardDemo() {
         </Card>
 
         <div className="flex justify-center">
-          <Image src={General} width={500} height={500} alt="general.png" />
+          <CardItem translateZ="100">
+            <Image src={General} width={500} height={500} alt="general.png" />{" "}
+          </CardItem>
         </div>
 
         <Card className="text-center flex justify-center border-none shadow-none bg-green-900 rounded-none">
