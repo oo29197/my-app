@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
-
+import { UserButton, SignInButton, useAuth } from "@clerk/nextjs";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -11,6 +11,8 @@ import {
 } from "@/components/ui/navigation-menu";
 
 export function NavigationBar() {
+  const { isSignedIn } = useAuth();
+
   return (
     <NavigationMenu className="list-none py-4 pl-4 gap-4">
       <NavigationMenuItem>
@@ -28,6 +30,10 @@ export function NavigationBar() {
           </NavigationMenuLink>
         </Link>
       </NavigationMenuItem>
+
+      {/* <div className="text-right flex gap-4">
+        {isSignedIn ? <UserButton/> : <SignInButton/>}
+      </div> */}
     </NavigationMenu>
   );
 }
