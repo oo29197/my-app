@@ -20,15 +20,6 @@ export function ThreeDCardDemo() {
 
   return (
     <>
-      <div className="bg-black p-4">
-        <HoverBorderGradient
-          containerClassName="rounded-full"
-          as="button"
-          className="bg-black text-white dark:text-white flex items-center space-x-2"
-        >
-          <span>Aceternity UI</span>
-        </HoverBorderGradient>
-      </div>
 
       <CardContainer className="w-full max-w-5xl mx-auto">
         <CardBody className="flex flex-col justify-center bg-green-900 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] sm:w-[50rem] h-auto rounded-xl p-6 border  ">
