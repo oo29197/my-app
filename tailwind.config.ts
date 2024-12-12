@@ -1,5 +1,7 @@
 import type { Config } from "tailwindcss";
 
+const { fontFamily } = require('tailwindcss/defaultTheme');
+
 const config: Config = {
   darkMode: ["class"],
   content: [
@@ -12,6 +14,9 @@ const config: Config = {
       backgroundImage: {
         landing: "url(/exterior.png)",
         hero: "url(/baseinterior.png)",
+      },
+      fontFamily: {
+        aldrich: ['var(--font-aldrich)', ...fontFamily.sans],
       },
       colors: {
         background: "hsl(var(--background))",

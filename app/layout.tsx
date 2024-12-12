@@ -8,18 +8,13 @@ import {
   UserButton,
 } from "@clerk/nextjs";
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Aldrich } from "next/font/google";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+const aldrich = Aldrich({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-aldrich",
 });
 
 export const metadata: Metadata = {
@@ -36,7 +31,7 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased bg-teal-950 pt-1 bg-landing bg-cover pb-16`}
+          className={`${aldrich.variable} antialiased bg-teal-950 pt-1 bg-landing bg-cover pb-16 font-aldrich`}
         >
           <header className="flex justify-end">
             <SignedOut>

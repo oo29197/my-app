@@ -93,7 +93,7 @@ export default function FunAboutMeGallery() {
             src="/profilepicture.png?height=128&width=128"
             alt="Jane Doe"
           />
-          <AvatarFallback>X</AvatarFallback>
+          <AvatarFallback className="bg-green-500 text-white">X</AvatarFallback>
         </Avatar>
         <h1 className="text-4xl font-bold mb-2 text-white">Xavier</h1>
       </motion.header>

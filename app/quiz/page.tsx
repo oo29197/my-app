@@ -7,7 +7,7 @@ import Death from "/public/death.gif";
 import General from "/public/general.gif";
 import Soul from "/public/staring_to_soul.gif";
 import { ChevronRight } from "lucide-react";
-import Correct from "/public/correct.gif"
+import Correct from "/public/correct.gif";
 
 import {
   Card,
@@ -111,7 +111,7 @@ export default function Quiz() {
 
               {currentStep === 3 && (
                 <>
-                  1. Which of the following is NOT a common risk facter for
+                  1. Which of the following is NOT a common risk factor for
                   youth drug abuse in Singapore?
                 </>
               )}
@@ -162,7 +162,7 @@ export default function Quiz() {
 
             {currentStep === 2 && (
               <CardDescription className="text-green-500">
-                I've recieved reports that some of you have been sneaking the
+                I've received reports that some of you have been sneaking the
                 stuff into here... Correctly answer this quiz, and you shall be
                 deemed INNOCENT.{" "}
               </CardDescription>
@@ -225,11 +225,11 @@ export default function Quiz() {
               )}
 
               {click && (
-                <div className="bg-black min-w-[500px] text-center p-2">
+                <div className="bg-black min-w-[500px] text-center p-2 text-xl">
                   {selectedValue === "4" ? (
                     <div className="flex flex-col gap-2 justify-center items-center">
                       <p>[YOU ARE RIGHT]</p>
-                      <p className="pb-6">
+                      <p className="flex items-center gap-2 pb-6">
                         [CLICK{" "}
                         <Button
                           variant="lightBlue"
@@ -241,7 +241,6 @@ export default function Quiz() {
                         TO PROCEED]
                       </p>
 
-                      {/* insert here */}
                       <Image
                         src={Correct}
                         width={1000}
@@ -250,9 +249,9 @@ export default function Quiz() {
                       />
                     </div>
                   ) : (
-                    <>
+                    <div className="flex flex-col gap-2 justify-center items-center">
                       <p>[YOU ARE WRONG]</p>
-                      <p className="pb-6">
+                      <p className="flex items-center gap-2 pb-6">
                         [CLICK{" "}
                         <Button
                           variant="lightBlue"
@@ -269,7 +268,7 @@ export default function Quiz() {
                         height={1000}
                         alt="death.png"
                       />
-                    </>
+                    </div>
                   )}
                 </div>
               )}
@@ -312,7 +311,7 @@ export default function Quiz() {
               )}
 
               {click && (
-                <div className="bg-black min-w-[500px] text-center">
+                <div className="bg-black min-w-[500px] text-center text-xl">
                   {selectedValue === "1" ? (
                     <div className="flex flex-col gap-2 justify-center items-center">
                       <p>[YOU ARE RIGHT]</p>
@@ -327,17 +326,17 @@ export default function Quiz() {
                         </Button>{" "}
                         TO PROCEED]
                         <Image
-                        src={Correct}
-                        width={1000}
-                        height={1000}
-                        alt="death.png"
-                      />
+                          src={Correct}
+                          width={1000}
+                          height={1000}
+                          alt="death.png"
+                        />
                       </p>
                     </div>
                   ) : (
-                    <>
+                    <div className="flex flex-col gap-2 justify-center items-center text-xl ">
                       <p>[YOU ARE WRONG]</p>
-                      <p className="pb-6">
+                      <p className="flex items-center gap-2 pb-6">
                         [CLICK{" "}
                         <Button
                           variant="lightBlue"
@@ -354,7 +353,7 @@ export default function Quiz() {
                         height={1000}
                         alt="death.png"
                       />
-                    </>
+                    </div>
                   )}
                 </div>
               )}
@@ -371,29 +370,37 @@ export default function Quiz() {
                 >
                   <div className="flex items-center space-x-2">
                     <RadioGroupItem value="1" id="1" />
-                    <Label htmlFor="1" className="text-xl">~25%</Label>
+                    <Label htmlFor="1" className="text-xl">
+                      ~25%
+                    </Label>
                   </div>
                   <div className="flex items-center space-x-2">
                     <RadioGroupItem value="2" id="2" />
-                    <Label htmlFor="2" className="text-xl">~40%</Label>
+                    <Label htmlFor="2" className="text-xl">
+                      ~40%
+                    </Label>
                   </div>
                   <div className="flex items-center space-x-2">
                     <RadioGroupItem value="3" id="3" />
-                    <Label htmlFor="3" className="text-xl">~60%</Label>
+                    <Label htmlFor="3" className="text-xl">
+                      ~60%
+                    </Label>
                   </div>
                   <div className="flex items-center space-x-2">
                     <RadioGroupItem value="4" id="4" />
-                    <Label htmlFor="4" className="text-xl">~80%</Label>
+                    <Label htmlFor="4" className="text-xl">
+                      ~80%
+                    </Label>
                   </div>
                 </RadioGroup>
               )}
 
               {click && (
-                <div className="bg-black min-w-[500px] text-center">
+                <div className="bg-black min-w-[500px] text-center text-xl">
                   {selectedValue === "3" ? (
                     <div className="flex flex-col gap-2 justify-center items-center">
                       <p>[YOU ARE RIGHT]</p>
-                      <p className="pb-6">
+                      <p className="flex items-center gap-2 pb-6">
                         [CLICK{" "}
                         <Button
                           variant="lightBlue"
@@ -405,8 +412,6 @@ export default function Quiz() {
                         TO PROCEED]
                       </p>
 
-
-                      {/* insert here */}
                       <Image
                         src={Correct}
                         width={1000}
@@ -415,9 +420,9 @@ export default function Quiz() {
                       />
                     </div>
                   ) : (
-                    <>
+                    <div className="flex flex-col gap-2 justify-center items-center">
                       <p>[YOU ARE WRONG]</p>
-                      <p className="pb-6">
+                      <p className="flex items-center gap-2 pb-6">
                         [CLICK{" "}
                         <Button
                           variant="lightBlue"
@@ -434,7 +439,7 @@ export default function Quiz() {
                         height={1000}
                         alt="death.png"
                       />
-                    </>
+                    </div>
                   )}
                 </div>
               )}
@@ -451,29 +456,37 @@ export default function Quiz() {
                 >
                   <div className="flex items-center space-x-2">
                     <RadioGroupItem value="1" id="1" />
-                    <Label htmlFor="1" className="text-xl">Singapore Police Force</Label>
+                    <Label htmlFor="1" className="text-xl">
+                      Singapore Police Force
+                    </Label>
                   </div>
                   <div className="flex items-center space-x-2">
                     <RadioGroupItem value="2" id="2" />
-                    <Label htmlFor="2" className="text-xl">Central Narcotics Bureau (CNB)</Label>
+                    <Label htmlFor="2" className="text-xl">
+                      Central Narcotics Bureau (CNB)
+                    </Label>
                   </div>
                   <div className="flex items-center space-x-2">
                     <RadioGroupItem value="3" id="3" />
-                    <Label htmlFor="3" className="text-xl">Ministry of Home Affairs</Label>
+                    <Label htmlFor="3" className="text-xl">
+                      Ministry of Home Affairs
+                    </Label>
                   </div>
                   <div className="flex items-center space-x-2">
                     <RadioGroupItem value="4" id="4" />
-                    <Label htmlFor="4" className="text-xl">Ministry of Education</Label>
+                    <Label htmlFor="4" className="text-xl">
+                      Ministry of Education
+                    </Label>
                   </div>
                 </RadioGroup>
               )}
 
               {click && (
-                <div className="bg-black min-w-[500px] text-center">
+                <div className="bg-black min-w-[500px] text-center text-xl">
                   {selectedValue === "2" ? (
                     <div className="flex flex-col gap-2 justify-center items-center">
                       <p>[YOU ARE RIGHT]</p>
-                      <p className="pb-6">
+                      <p className="flex items-center gap-2 pb-6">
                         [CLICK{" "}
                         <Button
                           variant="lightBlue"
@@ -485,7 +498,6 @@ export default function Quiz() {
                         TO PROCEED]
                       </p>
 
-                      {/* insert here */}
                       <Image
                         src={Correct}
                         width={1000}
@@ -494,9 +506,9 @@ export default function Quiz() {
                       />
                     </div>
                   ) : (
-                    <>
+                    <div className="flex flex-col gap-2 justify-center items-center">
                       <p>[YOU ARE WRONG]</p>
-                      <p className="pb-6">
+                      <p className="flex items-center gap-2 pb-6">
                         [CLICK{" "}
                         <Button
                           variant="lightBlue"
@@ -513,7 +525,7 @@ export default function Quiz() {
                         height={1000}
                         alt="death.png"
                       />
-                    </>
+                    </div>
                   )}
                 </div>
               )}
@@ -530,29 +542,37 @@ export default function Quiz() {
                 >
                   <div className="flex items-center space-x-2">
                     <RadioGroupItem value="1" id="1" />
-                    <Label htmlFor="1" className="text-xl">10 years in prison</Label>
+                    <Label htmlFor="1" className="text-xl">
+                      10 years in prison
+                    </Label>
                   </div>
                   <div className="flex items-center space-x-2">
                     <RadioGroupItem value="2" id="2" />
-                    <Label htmlFor="2" className="text-xl">Life imprisonment (CNB)</Label>
+                    <Label htmlFor="2" className="text-xl">
+                      Life imprisonment (CNB)
+                    </Label>
                   </div>
                   <div className="flex items-center space-x-2">
                     <RadioGroupItem value="3" id="3" />
-                    <Label htmlFor="3" className="text-xl">Mandatory rehabilitation</Label>
+                    <Label htmlFor="3" className="text-xl">
+                      Mandatory rehabilitation
+                    </Label>
                   </div>
                   <div className="flex items-center space-x-2">
                     <RadioGroupItem value="4" id="4" />
-                    <Label htmlFor="4" className="text-xl">death.</Label>
+                    <Label htmlFor="4" className="text-xl">
+                      death.
+                    </Label>
                   </div>
                 </RadioGroup>
               )}
 
               {click && (
-                <div className="bg-black min-w-[500px] text-center">
+                <div className="bg-black min-w-[500px] text-center text-xl">
                   {selectedValue === "4" ? (
                     <div className="flex flex-col gap-2 justify-center items-center">
                       <p>[YOU ARE RIGHT]</p>
-                      <p className="pb-6">
+                      <p className="flex items-center gap-2 pb-6">
                         [CLICK{" "}
                         <Button
                           variant="lightBlue"
@@ -564,7 +584,6 @@ export default function Quiz() {
                         TO PROCEED]
                       </p>
 
-                      {/* insert here */}
                       <Image
                         src={Correct}
                         width={1000}
@@ -573,9 +592,9 @@ export default function Quiz() {
                       />
                     </div>
                   ) : (
-                    <>
+                    <div className="flex flex-col gap-2 justify-center items-center">
                       <p>[YOU ARE WRONG]</p>
-                      <p className="pb-6">
+                      <p className="flex items-center gap-2 pb-6">
                         [CLICK{" "}
                         <Button
                           variant="lightBlue"
@@ -592,7 +611,7 @@ export default function Quiz() {
                         height={1000}
                         alt="death.png"
                       />
-                    </>
+                    </div>
                   )}
                 </div>
               )}
@@ -623,21 +642,25 @@ export default function Quiz() {
                 >
                   <div className="flex items-center space-x-2">
                     <RadioGroupItem value="1" id="1" />
-                    <Label htmlFor="1" className="text-xl">Yes</Label>
+                    <Label htmlFor="1" className="text-xl">
+                      Yes
+                    </Label>
                   </div>
                   <div className="flex items-center space-x-2">
                     <RadioGroupItem value="2" id="2" />
-                    <Label htmlFor="2" className="text-xl">No</Label>
+                    <Label htmlFor="2" className="text-xl">
+                      No
+                    </Label>
                   </div>
                 </RadioGroup>
               )}
 
               {click && (
-                <div className="bg-black min-w-[500px] text-center">
+                <div className="bg-black min-w-[500px] text-center text-xl">
                   {selectedValue === "1" ? (
                     <div className="flex flex-col gap-2 justify-center items-center">
                       <p>[YOU ARE RIGHT]</p>
-                      <p className="pb-6">
+                      <p className="flex items-center gap-2 pb-6">
                         [CLICK{" "}
                         <Button
                           variant="lightBlue"
@@ -649,7 +672,6 @@ export default function Quiz() {
                         TO PROCEED]
                       </p>
 
-                      {/* insert here */}
                       <Image
                         src={Correct}
                         width={1000}
@@ -658,9 +680,9 @@ export default function Quiz() {
                       />
                     </div>
                   ) : (
-                    <>
+                    <div className="flex flex-col gap-2 justify-center items-center">
                       <p>[YOU ARE WRONG]</p>
-                      <p className="pb-6">
+                      <p className="flex items-center gap-2 pb-6">
                         [CLICK{" "}
                         <Button
                           variant="lightBlue"
@@ -677,7 +699,7 @@ export default function Quiz() {
                         height={1000}
                         alt="death.png"
                       />
-                    </>
+                    </div>
                   )}
                 </div>
               )}
