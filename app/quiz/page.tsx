@@ -92,7 +92,7 @@ export default function Quiz() {
 
   return (
     <>
-      <div className="flex flex-col justify-center items-center gap-10">
+      <div className="flex flex-col justify-center items-center gap-10 pt-6">
         <Card className="w-[800px] text-center bg-green-900 border-none rounded-none">
           <CardHeader>
             <CardTitle className="text-green-500">

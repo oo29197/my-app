@@ -31,13 +31,13 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body
-          className={`${aldrich.variable} antialiased bg-teal-950 pt-1 bg-landing bg-cover pb-16 font-aldrich`}
+          className={`${aldrich.variable} antialiased bg-teal-950 pt-1 bg-landing bg-cover font-aldrich`}
         >
           <header className="flex justify-end">
             <SignedOut>
-              <div className="pr-8 pt-4">
+              <div className="pr-12 pt-8">
                 <SignInButton>
-                  <Button variant="lightBlue" size="lg">
+                  <Button variant="default" size="lg">
                     Sign In
                   </Button>
                 </SignInButton>
@@ -54,8 +54,9 @@ export default function RootLayout({
           </SignedIn>
 
           <SignedOut>
-            <div className="flex justify-center items-center text-4xl h-screen text-center text-white">
-              <p>Please sign in to access this content.</p>
+            <div className="flex flex-col gap-2 justify-center items-center text-4xl h-[350px] text-center text-white">
+              <p>Welcome Soldiers 🇸🇬 </p>
+              <p>Please sign in to access the content.</p>
             </div>
           </SignedOut>
         </body>
