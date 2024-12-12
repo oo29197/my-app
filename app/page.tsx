@@ -9,11 +9,14 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { ThreeDCardDemo } from "@/components/3dcard/3dcard";
 
 export default function Home() {
   return (
     <div className="flex flex-col justify-center items-center pt-12">
-      <Card className="w-[800px] text-center border-none bg-green-900 rounded-none">
+
+      <ThreeDCardDemo />
+      {/* <Card className="w-[800px] text-center border-none bg-green-900 rounded-none">
         <CardHeader>
           <CardTitle className="text-green-500">Feeling stressed?</CardTitle>
           <CardDescription className="text-green-500">
@@ -40,7 +43,7 @@ export default function Home() {
             Attend Briefing
           </Button>
         </Link>
-      </div>
+      </div> */}
     </div>
   );
 }
