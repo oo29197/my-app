@@ -1,18 +1,14 @@
 "use client";
 
-import * as React from "react";
-import Link from "next/link";
-import { UserButton, SignInButton, useAuth } from "@clerk/nextjs";
 import {
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuLink,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import Link from "next/link";
 
 export function NavigationBar() {
-  const { isSignedIn } = useAuth();
-
   return (
     <NavigationMenu className="list-none py-4 pl-4 gap-4">
       <NavigationMenuItem>
@@ -31,9 +27,13 @@ export function NavigationBar() {
         </Link>
       </NavigationMenuItem>
 
-      {/* <div className="text-right flex gap-4">
-        {isSignedIn ? <UserButton/> : <SignInButton/>}
-      </div> */}
+      <NavigationMenuItem>
+        <Link href="/resource" legacyBehavior passHref>
+          <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+            Say No to Drugs
+          </NavigationMenuLink>
+        </Link>
+      </NavigationMenuItem>
     </NavigationMenu>
   );
 }

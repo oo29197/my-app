@@ -2,7 +2,7 @@ import Image from "next/image";
 import General from "/public/general.gif";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import exterior from "/public/exterior.png"
+import exterior from "/public/exterior.png";
 import {
   Card,
   CardDescription,
@@ -12,7 +12,7 @@ import {
 
 export default function Home() {
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className="flex flex-col justify-center items-center pt-12">
       <Card className="w-[800px] text-center border-none bg-green-900 rounded-none">
         <CardHeader>
           <CardTitle className="text-green-500">Feeling stressed?</CardTitle>
