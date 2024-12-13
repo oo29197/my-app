@@ -14,7 +14,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { motion } from "framer-motion";
 import { Ban, Bike, Book, Coffee } from "lucide-react";
 import Image from "next/image";
-import General from "/public/general.gif";
+import Winners from "/public/winners.png";
 
 export default function FunAboutMeGallery() {
   const funFacts = [
@@ -175,14 +175,14 @@ export default function FunAboutMeGallery() {
               </CardHeader>
               <CardContent>
                 <Image
-                  src={General}
-                  width={500}
-                  height={500}
-                  alt="general.png"
+                  src={Winners}
+                  width={400}
+                  height={400}
+                  alt="winners.png"
                 />
               </CardContent>
               <CardFooter>
-                [Left to Right] Joshua Ang | Joshua Lim | Xavier | Minn
+                [Left to Right] Xavier | Joshua Ang | Minn | Joshua Lim
               </CardFooter>
             </Card>
           </TabsContent>
