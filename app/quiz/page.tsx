@@ -1,26 +1,25 @@
 "use client";
 
+import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Briefing1 from "/public/briefing1.png";
 import Briefing2 from "/public/briefing2.png";
+import Correct from "/public/correct.gif";
 import Death from "/public/death.gif";
 import General from "/public/general.gif";
 import Soul from "/public/staring_to_soul.gif";
-import { ChevronRight } from "lucide-react";
-import Correct from "/public/correct.gif";
-
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardDescription,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { useState } from "react";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import Face from "/public/face.png";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
+import Face from "/public/face.png";
 
 export default function Quiz() {
   const [currentStep, setCurrentStep] = useState(1);
@@ -170,7 +169,7 @@ export default function Quiz() {
           </CardHeader>
         </Card>
 
-        <Card className="w-[800px] flex justify-center border-none bg-black p-8 text-cyan-500 rounded-none">
+        <Card className="w-[800px] flex justify-center border-none bg-gray-800 p-8 text-cyan-500 rounded-none">
           {currentStep === 1 && (
             <Image
               src={Briefing2}
@@ -225,7 +224,7 @@ export default function Quiz() {
               )}
 
               {click && (
-                <div className="bg-black min-w-[500px] text-center p-2 text-xl">
+                <div className="bg-gray-800 min-w-[500px] text-center p-2 text-xl">
                   {selectedValue === "4" ? (
                     <div className="flex flex-col gap-2 justify-center items-center">
                       <p>[YOU ARE RIGHT]</p>
@@ -311,11 +310,11 @@ export default function Quiz() {
               )}
 
               {click && (
-                <div className="bg-black min-w-[500px] text-center text-xl">
+                <div className="bg-gray-800 min-w-[500px] text-center text-xl">
                   {selectedValue === "1" ? (
                     <div className="flex flex-col gap-2 justify-center items-center">
                       <p>[YOU ARE RIGHT]</p>
-                      <p className="pb-6">
+                      <p className="flex items-center gap-2 pb-6">
                         [CLICK{" "}
                         <Button
                           variant="lightBlue"
@@ -325,13 +324,14 @@ export default function Quiz() {
                           {">"}
                         </Button>{" "}
                         TO PROCEED]
-                        <Image
-                          src={Correct}
-                          width={1000}
-                          height={1000}
-                          alt="death.png"
-                        />
                       </p>
+
+                      <Image
+                        src={Correct}
+                        width={1000}
+                        height={1000}
+                        alt="death.png"
+                      />
                     </div>
                   ) : (
                     <div className="flex flex-col gap-2 justify-center items-center text-xl ">
@@ -396,7 +396,7 @@ export default function Quiz() {
               )}
 
               {click && (
-                <div className="bg-black min-w-[500px] text-center text-xl">
+                <div className="bg-gray-800 min-w-[500px] text-center text-xl">
                   {selectedValue === "3" ? (
                     <div className="flex flex-col gap-2 justify-center items-center">
                       <p>[YOU ARE RIGHT]</p>
@@ -482,7 +482,7 @@ export default function Quiz() {
               )}
 
               {click && (
-                <div className="bg-black min-w-[500px] text-center text-xl">
+                <div className="bg-gray-800 min-w-[500px] text-center text-xl">
                   {selectedValue === "2" ? (
                     <div className="flex flex-col gap-2 justify-center items-center">
                       <p>[YOU ARE RIGHT]</p>
@@ -568,7 +568,7 @@ export default function Quiz() {
               )}
 
               {click && (
-                <div className="bg-black min-w-[500px] text-center text-xl">
+                <div className="bg-gray-800 min-w-[500px] text-center text-xl">
                   {selectedValue === "4" ? (
                     <div className="flex flex-col gap-2 justify-center items-center">
                       <p>[YOU ARE RIGHT]</p>
@@ -656,7 +656,7 @@ export default function Quiz() {
               )}
 
               {click && (
-                <div className="bg-black min-w-[500px] text-center text-xl">
+                <div className="bg-gray-800 min-w-[500px] text-center text-xl">
                   {selectedValue === "1" ? (
                     <div className="flex flex-col gap-2 justify-center items-center">
                       <p>[YOU ARE RIGHT]</p>
@@ -715,15 +715,11 @@ export default function Quiz() {
       <div className="flex justify-end pr-[235px] pt-4">
         {currentStep === 12 && (
           <Button variant="lightBlue" size="md" onClick={handleEnd}>
-            <p>END</p>
+            <p className="px-8">END</p>
           </Button>
         )}
 
-        {(currentStep === 1 ||
-          currentStep === 2 ||
-          currentStep === 8 ||
-          currentStep === 9 ||
-          currentStep === 10) && (
+        {[1, 2, 8, 9, 10].includes(currentStep) && (
           <div
             className="bg-cyan-900 rounded-lg py-2 px-4 cursor-pointer"
             onClick={handleNext}

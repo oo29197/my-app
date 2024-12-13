@@ -1,18 +1,20 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
 import {
   Card,
   CardContent,
   CardDescription,
+  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Coffee, Bike, Book, Ban } from "lucide-react";
+import { motion } from "framer-motion";
+import { Ban, Bike, Book, Coffee } from "lucide-react";
 import Image from "next/image";
+import General from "/public/general.gif";
 
 export default function FunAboutMeGallery() {
   const funFacts = [
@@ -100,10 +102,11 @@ export default function FunAboutMeGallery() {
 
       <main className="max-w-4xl mx-auto">
         <Tabs defaultValue="about" className="mb-12">
-          <TabsList className="grid w-full grid-cols-3">
+          <TabsList className="grid w-full grid-cols-4">
             <TabsTrigger value="about">About Me</TabsTrigger>
             <TabsTrigger value="skills">Hobbies</TabsTrigger>
             <TabsTrigger value="funfacts">Fun Facts</TabsTrigger>
+            <TabsTrigger value="team">The Builders</TabsTrigger>
           </TabsList>
           <TabsContent value="about">
             <Card>
@@ -165,6 +168,24 @@ export default function FunAboutMeGallery() {
               </CardContent>
             </Card>
           </TabsContent>
+          <TabsContent value="team">
+            <Card>
+              <CardHeader>
+                <CardTitle>The Builders 👷‍♂️👷</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <Image
+                  src={General}
+                  width={500}
+                  height={500}
+                  alt="general.png"
+                />
+              </CardContent>
+              <CardFooter>
+                [Left to Right] Joshua Ang | Joshua Lim | Xavier | Minn
+              </CardFooter>
+            </Card>
+          </TabsContent>
         </Tabs>
 
         <motion.section
@@ -176,7 +197,7 @@ export default function FunAboutMeGallery() {
             <CardHeader>
               <CardTitle>hints of the content</CardTitle>
               <CardDescription>
-               Some images you will see on this website...
+                Some images you will see on this website...
               </CardDescription>
             </CardHeader>
             <CardContent>
