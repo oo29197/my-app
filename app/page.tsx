@@ -6,8 +6,9 @@ export default function Home() {
   return (
     <div className="flex flex-col justify-center items-center pt-12">
       <ThreeDCardDemo />
-      <CardTitle className="text-green-400 bg-gradient-to-b from-gray-800 to-gray-700 py-4 px-12 rounded-lg text-3xl shadow-2xl">
-        Did you know? 🧐
+      <CardTitle className="text-white py-4 px-12 rounded-lg text-4xl shadow-none">
+        <h1 className="[text-shadow:_0_2px_0_rgb(0_0_0_/_60%)]">Did you know? 🧐</h1>
+        
       </CardTitle>
       <InfiniteMovingCardsDemo />
     </div>
