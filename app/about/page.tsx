@@ -6,9 +6,8 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
-  CardTitle,
+  CardTitle
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { motion } from "framer-motion";
@@ -169,22 +168,16 @@ export default function FunAboutMeGallery() {
             </Card>
           </TabsContent>
           <TabsContent value="team">
-            <Card>
-              <CardHeader>
+            <div className="flex items-center gap-8 bg-white p-12 rounded-xl">
+              <CardHeader className="flex flex-col gap-4">
                 <CardTitle>The Builders 👷‍♂️👷</CardTitle>
+                <CardDescription>
+                  {" "}
+                  [Left to Right] Xavier | Joshua Ang | Minn | Joshua Lim
+                </CardDescription>
               </CardHeader>
-              <CardContent>
-                <Image
-                  src={Winners}
-                  width={400}
-                  height={400}
-                  alt="winners.png"
-                />
-              </CardContent>
-              <CardFooter>
-                [Left to Right] Xavier | Joshua Ang | Minn | Joshua Lim
-              </CardFooter>
-            </Card>
+              <Image src={Winners} width={400} height={400} alt="winners.png" />
+            </div>
           </TabsContent>
         </Tabs>
 

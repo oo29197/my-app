@@ -37,7 +37,7 @@ export default function RootLayout({
             <SignedOut>
               <div className="pr-12 pt-8">
                 <SignInButton>
-                  <Button variant="default" size="lg">
+                  <Button variant="lightBlue" size="lg">
                     Sign In
                   </Button>
                 </SignInButton>
